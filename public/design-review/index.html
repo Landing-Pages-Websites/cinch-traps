@@ -20,7 +20,7 @@ figcaption{font-size:12px;color:#999;margin-top:4px}
 .chip.unmapped{background:#630} .chip.client-copy{background:#444}
 </style>
 <h1>Image asset review</h1>
-<p class='muted'>55 regions stay CODE (CSS/SVG — no file). 10 raster assets to review: 5 extract, 2 inpaint.</p>
+<p class='muted'>53 regions stay CODE (CSS/SVG — no file). 12 raster assets to review: 7 extract, 2 inpaint.</p>
 <div class='proto'><b>How to review:</b> judge each asset against its design reference on the left. To swap one out, replace the file directly in git — same path, push to main (<a href='https://github.com/Landing-Pages-Websites/cinch-traps/tree/main/public/images/design'>assets folder in the repo</a>; each card links to its file). Replaced files are authoritative — the pipeline never overwrites them. This page updates on every push. Complete the review subtask to approve; the build does not start until then.</div>
 <div class='card' id='01-hero-r1'>
 <b>01-hero-r1</b><span class='chip inpaint'>inpaint</span>
@@ -61,6 +61,22 @@ figcaption{font-size:12px;color:#999;margin-top:4px}
 <div class='pair'>
 <figure><a href='crops/05-how-it-works-context.png'><img src='crops/05-how-it-works-r3-ref.png' alt=''></a><figcaption>design reference — 05-how-it-works (click for full frame)</figcaption></figure>
 <figure><img src='../images/design/elements/how-step-trap-reset.png' alt=''><figcaption>shipped asset — <a href='https://github.com/Landing-Pages-Websites/cinch-traps/blob/main/public/images/design/elements/how-step-trap-reset.png'><code>elements/how-step-trap-reset.png</code></a> (replace in git)</figcaption></figure>
+</div></div>
+<div class='card' id='05-how-it-works-r6'>
+<b>05-how-it-works-r6</b><span class='chip extract'>extract</span>
+<div class='muted'>Step 3 visual: warm painterly ILLUSTRATION of a trap being placed into an open tunnel (matches ref style).</div>
+<div class='muted'>FULL-SCENE reconstruction as ILLUSTRATION (same painterly style as ref): yellow overlays removed, scene extended. Was misclassified as line-art SVG.</div>
+<div class='pair'>
+<figure><a href='crops/05-how-it-works-context.png'><img src='crops/05-how-it-works-r6-ref.png' alt=''></a><figcaption>design reference — 05-how-it-works (click for full frame)</figcaption></figure>
+<figure><img src='../images/design/elements/how-step3-trap.png' alt=''><figcaption>shipped asset — <a href='https://github.com/Landing-Pages-Websites/cinch-traps/blob/main/public/images/design/elements/how-step3-trap.png'><code>elements/how-step3-trap.png</code></a> (replace in git)</figcaption></figure>
+</div></div>
+<div class='card' id='05-how-it-works-r9'>
+<b>05-how-it-works-r9</b><span class='chip extract'>extract</span>
+<div class='muted'>Step 1 visual: warm painterly ILLUSTRATION of a molehill mound in grass (matches ref style).</div>
+<div class='muted'>FULL-SCENE reconstruction as ILLUSTRATION (same painterly style as ref): yellow overlays removed (SVG layer), scene extended. Was misclassified as line-art SVG — the ref shows painterly illustration.</div>
+<div class='pair'>
+<figure><a href='crops/05-how-it-works-context.png'><img src='crops/05-how-it-works-r9-ref.png' alt=''></a><figcaption>design reference — 05-how-it-works (click for full frame)</figcaption></figure>
+<figure><img src='../images/design/elements/how-step1-mound.png' alt=''><figcaption>shipped asset — <a href='https://github.com/Landing-Pages-Websites/cinch-traps/blob/main/public/images/design/elements/how-step1-mound.png'><code>elements/how-step1-mound.png</code></a> (replace in git)</figcaption></figure>
 </div></div>
 <div class='card' id='06-heritage-r1'>
 <b>06-heritage-r1</b><span class='chip extract'>extract</span>
@@ -167,4 +183,5 @@ No full-bleed background image was extracted because the page background is a si
 - how-step1-trap + how-step-trap-trigger reclassified CODE — vector-style line art, build as inline SVG.
 - how-step-trap-set: the numbered square is NOT in the asset — number squares are an SVG/HTML layer on all step tiles.
 - 05-how-it-works step imagery is ILLUSTRATION (warm painterly, per reviewer): how-step-trap-set.png + how-step-trap-reset.png regenerated in the ref&#x27;s illustration style. Medium must match the comp — never substitute photos where the design shows illustration.
+- CORRECTION: ALL FOUR how-it-works step visuals are painterly ILLUSTRATIONS (how-step1-mound, how-step-trap-set, how-step3-trap, how-step-trap-reset) — the earlier line-art/SVG call on steps 1+3 was wrong. Only the number squares, dashed connector lines, captions, and CTA are code.
 </pre></details>

@@ -354,10 +354,10 @@
       1049,
       531
      ],
-     "verdict": "code",
-     "what": "Step 3 visual: line-art trigger-stage trap diagram.",
-     "asset_file": "",
-     "build_note": "Recreated inline SVG line art \u2014 reviewer call: vector-style, not photography."
+     "verdict": "extract",
+     "what": "Step 3 visual: warm painterly ILLUSTRATION of a trap being placed into an open tunnel (matches ref style).",
+     "asset_file": "elements/how-step3-trap.png",
+     "build_note": "FULL-SCENE reconstruction as ILLUSTRATION (same painterly style as ref): yellow overlays removed, scene extended. Was misclassified as line-art SVG."
     },
     {
      "id": 7,
@@ -391,10 +391,10 @@
       301,
       504
      ],
-     "verdict": "code",
-     "what": "Step 1 visual: line-art trap/tunnel diagram.",
-     "asset_file": "",
-     "build_note": "Recreated inline SVG line art (stroke #111, yellow accents) \u2014 reviewer call: this is vector-style, not photography."
+     "verdict": "extract",
+     "what": "Step 1 visual: warm painterly ILLUSTRATION of a molehill mound in grass (matches ref style).",
+     "asset_file": "elements/how-step1-mound.png",
+     "build_note": "FULL-SCENE reconstruction as ILLUSTRATION (same painterly style as ref): yellow overlays removed (SVG layer), scene extended. Was misclassified as line-art SVG \u2014 the ref shows painterly illustration."
     },
     {
      "id": 10,
