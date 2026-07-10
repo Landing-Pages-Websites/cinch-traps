@@ -3,6 +3,8 @@ import Hero from "@/components/sections/Hero";
 import TrustStrip from "@/components/sections/TrustStrip";
 import MoleOrGopher from "@/components/sections/MoleOrGopher";
 import ShopCategories from "@/components/sections/ShopCategories";
+import HowItWorks from "@/components/sections/HowItWorks";
+import Heritage from "@/components/sections/Heritage";
 
 export default function Home() {
   return (
@@ -13,6 +15,8 @@ export default function Home() {
         <TrustStrip />
         <MoleOrGopher />
         <ShopCategories />
+        <HowItWorks />
+        <Heritage />
       </main>
     </>
   );
