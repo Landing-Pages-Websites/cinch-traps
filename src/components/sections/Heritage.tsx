@@ -1,15 +1,23 @@
 import Image from "next/image";
 
-/** 06 — Heritage: dark #111 band with steel texture; tunnel line turns steel-silver here. */
+/** 06 — Heritage: dark #111 anchor with steel texture. Tunnel line turns steel-silver here.
+ *  Founder photo slot = neutral placeholder (real people are never generated). */
 export default function Heritage() {
   return (
     <section id="heritage" className="grain relative overflow-hidden bg-ink">
-      {/* warm right-side glow */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 bg-[radial-gradient(90%_80%_at_85%_50%,rgba(255,204,0,0.10),transparent_60%)]"
-      />
-      {/* tunnel line: enters top-left, steel-silver against the dark, exits bottom-right */}
+      {/* Steel macro photography, feathered right */}
+      <div className="absolute inset-y-0 right-0 w-full lg:w-3/5" aria-hidden="true">
+        <Image
+          src="/images/design/elements/heritage-steel-macro.png"
+          alt=""
+          fill
+          sizes="(max-width: 1024px) 100vw, 60vw"
+          className="object-cover object-center opacity-45 lg:opacity-70"
+        />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,#111111_0%,rgba(17,17,17,0.75)_45%,rgba(17,17,17,0.35)_100%)]" />
+      </div>
+
+      {/* Tunnel line: enters top-left, turns steel-silver against the dark, exits bottom-right */}
       <svg
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 h-full w-full"
@@ -18,40 +26,41 @@ export default function Heritage() {
         fill="none"
       >
         <path
-          d="M0 0 C 80 120, 60 300, 140 460 C 220 640, 1100 700, 1440 800"
+          d="M0 20 C 120 40, 180 120, 200 300 C 220 520, 700 640, 1100 700 L 1440 780"
           stroke="#BBC1C4"
           strokeWidth="2"
           strokeDasharray="14 10"
-          opacity="0.45"
+          opacity="0.5"
         />
+        <circle cx="200" cy="300" r="4" fill="#FFCC00" opacity="0.8" />
       </svg>
 
-      <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-5 py-20 sm:px-8 lg:grid-cols-2 lg:gap-16 lg:py-28">
-        <div>
+      <div className="relative mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:py-32">
+        <div className="max-w-2xl">
           <p className="font-display text-sm font-semibold uppercase tracking-[0.28em] text-yellow">
             The Legacy of Don Sprague
           </p>
-          <h2 className="mt-4 font-display text-3xl font-bold uppercase leading-tight text-white sm:text-4xl lg:text-[2.75rem]">
+          <h2 className="mt-4 font-display text-3xl font-bold uppercase leading-tight text-white sm:text-4xl lg:text-5xl">
             Handmade in Oregon From American Galvanized Steel — Since 1909.
           </h2>
-          <p className="mt-5 max-w-xl text-base leading-relaxed text-white/80">
+          <p className="mt-6 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
             If it&rsquo;s not stamped CINCH, it&rsquo;s not the original. Built
             on Don Sprague&rsquo;s legacy of innovation, problem-solving, and a
             genuine passion for helping growers succeed.
           </p>
 
-          <blockquote className="mt-8 border-l-4 border-yellow pl-5">
+          <blockquote className="mt-10 border-l-4 border-yellow pl-6">
             <p className="font-display text-xl font-medium leading-snug text-white sm:text-2xl">
               &ldquo;CINCH Trap was the all-around best performer.&rdquo;
             </p>
-            <cite className="mt-2 block text-sm not-italic text-steel">
+            <cite className="mt-3 block text-sm font-semibold not-italic uppercase tracking-[0.14em] text-steel">
               — USDA National Wildlife Research Center
             </cite>
           </blockquote>
 
           <a
             href="#heritage"
-            className="mt-9 inline-flex items-center gap-2 bg-yellow px-7 py-4 font-display text-base font-semibold uppercase tracking-[0.14em] text-ink transition-transform hover:-translate-y-0.5"
+            className="mt-10 inline-flex items-center gap-2 bg-yellow px-7 py-4 font-display text-base font-semibold uppercase tracking-[0.14em] text-ink transition-transform hover:-translate-y-0.5"
           >
             Our Story
             <svg width="18" height="12" viewBox="0 0 18 12" fill="none" aria-hidden="true">
@@ -60,42 +69,49 @@ export default function Heritage() {
           </a>
         </div>
 
-        <div className="relative">
-          <div className="relative aspect-[3/2] overflow-hidden rounded-md">
-            <Image
-              src="/images/design/elements/heritage-steel-macro.png"
-              alt="Macro detail of a galvanized steel Cinch trap mechanism in warm workshop light"
-              fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
-            />
-            <div
-              aria-hidden="true"
-              className="absolute inset-0 bg-[linear-gradient(120deg,rgba(17,17,17,0.35),transparent_45%)]"
-            />
-          </div>
-          {/* stamp roundel overlapping the photo corner */}
-          <svg
-            width="104"
-            height="104"
-            viewBox="0 0 104 104"
-            role="img"
-            aria-label="Handmade in Oregon — Since 1909 stamp"
-            className="absolute -bottom-6 -left-4 sm:-left-6"
+        {/* Stamp roundel — HANDMADE IN OREGON / SINCE 1909, inline SVG */}
+        <svg
+          width="150"
+          height="150"
+          viewBox="0 0 150 150"
+          role="img"
+          aria-label="Handmade in Oregon — Since 1909 stamp"
+          className="absolute right-8 top-16 hidden opacity-90 lg:block"
+        >
+          <circle cx="75" cy="75" r="72" fill="none" stroke="#FFCC00" strokeWidth="1.5" />
+          <circle cx="75" cy="75" r="58" fill="none" stroke="#FFCC00" strokeWidth="1" strokeDasharray="3 4" />
+          <defs>
+            <path id="stamp-arc" d="M75 24 a51 51 0 1 1 -0.01 0" fill="none" />
+          </defs>
+          <text fill="#FFCC00" fontFamily="var(--font-oswald)" fontSize="12" letterSpacing="3.5">
+            <textPath href="#stamp-arc" startOffset="0%">
+              HANDMADE IN OREGON · EST. 1909 ·
+            </textPath>
+          </text>
+          <text
+            x="75"
+            y="70"
+            textAnchor="middle"
+            fill="#FFCC00"
+            fontFamily="var(--font-oswald)"
+            fontSize="22"
+            fontWeight="700"
+            letterSpacing="4"
           >
-            <circle cx="52" cy="52" r="50" fill="#111111" stroke="#FFCC00" strokeWidth="1.5" />
-            <circle cx="52" cy="52" r="41" fill="none" stroke="#FFCC00" strokeWidth="1" strokeDasharray="3 3" />
-            <text x="52" y="42" textAnchor="middle" fill="#FFCC00" fontFamily="var(--font-oswald)" fontSize="10" letterSpacing="2">
-              HANDMADE IN
-            </text>
-            <text x="52" y="58" textAnchor="middle" fill="#FFCC00" fontFamily="var(--font-oswald)" fontSize="14" fontWeight="600" letterSpacing="2">
-              OREGON
-            </text>
-            <text x="52" y="74" textAnchor="middle" fill="#FFCC00" fontFamily="var(--font-oswald)" fontSize="10" letterSpacing="2">
-              SINCE 1909
-            </text>
-          </svg>
-        </div>
+            CINCH
+          </text>
+          <text
+            x="75"
+            y="92"
+            textAnchor="middle"
+            fill="#FFCC00"
+            fontFamily="var(--font-oswald)"
+            fontSize="14"
+            letterSpacing="3"
+          >
+            SINCE 1909
+          </text>
+        </svg>
       </div>
     </section>
   );

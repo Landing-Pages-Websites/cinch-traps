@@ -1,7 +1,8 @@
 import Image from "next/image";
 
-/** 05 — How It Works: quiet section, same #F6F5F0 band as 04 (tunnel line is the only seam marker).
- *  Step images are positional by filename — never reorder. Number squares are an HTML layer. */
+/** 05 — How It Works: QUIET section. Continues the #F6F5F0 surface from 04 unbroken.
+ *  Step visuals are the approved painterly illustrations (positional filenames = step numbers).
+ *  Number squares are an HTML layer (never baked into the asset). */
 
 const STEPS = [
   {
@@ -14,13 +15,13 @@ const STEPS = [
     n: "2",
     label: "Open it with the tunnel tool",
     img: "/images/design/elements/how-step2-trap-set.png",
-    alt: "Illustration of the tunnel opened with the tunnel tool and a trap set inside",
+    alt: "Illustration of a tunnel opened with the tunnel tool, trap being set",
   },
   {
     n: "3",
     label: "Set two traps facing opposite directions",
     img: "/images/design/elements/how-step3-trap.png",
-    alt: "Illustration of two traps set facing opposite directions in the tunnel",
+    alt: "Illustration of two Cinch traps set facing opposite directions in the tunnel",
   },
   {
     n: "4",
@@ -33,18 +34,24 @@ const STEPS = [
 export default function HowItWorks() {
   return (
     <section id="how-it-works" className="relative bg-cream">
-      {/* seam marker: tunnel line crossing unbroken from section 04 */}
+      {/* Tunnel line crosses the 04→05 seam unbroken and exits bottom-left */}
       <svg
         aria-hidden="true"
-        className="absolute -top-2 left-0 h-4 w-full"
-        viewBox="0 0 1440 16"
+        className="pointer-events-none absolute inset-x-0 top-0 h-8 w-full"
+        viewBox="0 0 1440 32"
         preserveAspectRatio="none"
         fill="none"
       >
-        <path d="M720 0 C 700 8, 500 8, 300 10 S 80 14, 0 16" stroke="#FFCC00" strokeWidth="2" strokeDasharray="12 8" opacity="0.6" />
+        <path
+          d="M720 0 C 740 12, 700 20, 640 24 S 400 20, 240 26 L 60 30"
+          stroke="#FFCC00"
+          strokeWidth="2"
+          strokeDasharray="12 8"
+          opacity="0.7"
+        />
       </svg>
 
-      <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 lg:py-24">
+      <div className="mx-auto max-w-6xl px-5 py-24 sm:px-8 lg:py-32">
         <div className="text-center">
           <p className="font-display text-xs font-semibold uppercase tracking-[0.28em] text-golddark sm:text-sm">
             No Poison. No Guesswork. No Touching the Animal.
@@ -54,39 +61,28 @@ export default function HowItWorks() {
           </h2>
         </div>
 
-        <ol className="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
-          {STEPS.map((step, i) => (
+        <ol className="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+          {STEPS.map((step) => (
             <li key={step.n} className="relative flex flex-col items-center text-center">
-              {/* dashed connector to the next step (desktop) */}
-              {i < STEPS.length - 1 && (
-                <svg
-                  aria-hidden="true"
-                  className="absolute -right-4 top-16 hidden h-2 w-8 lg:block"
-                  viewBox="0 0 32 8"
-                  fill="none"
-                >
-                  <path d="M0 4h32" stroke="#FFCC00" strokeWidth="2" strokeDasharray="6 5" />
-                </svg>
-              )}
-              <div className="relative w-full">
-                <div className="relative aspect-[16/9] w-full overflow-hidden rounded-md">
+              <div className="relative w-full max-w-[260px]">
+                <div className="relative aspect-square overflow-hidden rounded-md">
                   <Image
                     src={step.img}
                     alt={step.alt}
                     fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    sizes="(max-width: 640px) 80vw, (max-width: 1024px) 40vw, 22vw"
                     className="object-cover"
                   />
                 </div>
-                {/* stamped yellow number square — HTML layer per asset contract */}
+                {/* Stamped yellow number square — HTML layer over every tile */}
                 <span
                   aria-hidden="true"
-                  className="absolute -left-2 -top-3 flex h-10 w-10 items-center justify-center bg-yellow font-display text-lg font-bold text-ink shadow-[2px_2px_0_rgba(17,17,17,0.9)]"
+                  className="absolute -left-2 -top-2 flex h-11 w-11 items-center justify-center bg-yellow font-display text-xl font-bold text-ink shadow-[2px_2px_0_#111111]"
                 >
                   {step.n}
                 </span>
               </div>
-              <p className="mt-4 max-w-[16rem] font-display text-base font-medium uppercase tracking-[0.06em] text-ink">
+              <p className="mt-5 max-w-[240px] font-display text-base font-medium uppercase tracking-[0.08em] text-ink">
                 <span className="sr-only">Step {step.n}: </span>
                 {step.label}
               </p>
@@ -94,12 +90,15 @@ export default function HowItWorks() {
           ))}
         </ol>
 
-        <div className="mt-12 text-center">
+        <div className="mt-14 text-center">
           <a
             href="#how-it-works"
-            className="inline-block border-2 border-ink px-7 py-3.5 font-display text-sm font-semibold uppercase tracking-[0.14em] text-ink transition-colors hover:bg-ink hover:text-yellow"
+            className="inline-flex items-center gap-2 border-2 border-ink px-7 py-3.5 font-display text-sm font-semibold uppercase tracking-[0.14em] text-ink transition-colors hover:bg-ink hover:text-yellow"
           >
             See Full Instructions
+            <svg width="16" height="10" viewBox="0 0 16 10" fill="none" aria-hidden="true">
+              <path d="M0 5h13M10 1l4 4-4 4" stroke="currentColor" strokeWidth="1.8" />
+            </svg>
           </a>
         </div>
       </div>
