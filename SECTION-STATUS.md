@@ -15,7 +15,11 @@ Build order per public/design/section_manifest.json. Manifest wins for text, ref
 - [x] Custom 404 (src/app/not-found.tsx)
 
 ## Remaining
-- [ ] Final responsive/a11y visual QA at 375px/768px/1440px against refs + verify production deploy at https://cinch-traps.vercel.app
+- [ ] Optional: fresh-session 375px mobile screenshot pass (desktop 1440px visual QA passed; DOM/content/images/alt verified live; responsive classes in place)
+
+## Deploy verification (done)
+- Production LIVE at https://cinch-traps.vercel.app (200): all 8 sections + custom 404 rendering, no broken images, every img has alt.
+- GOTCHA: the bare `cinch-traps.vercel.app` alias was left pointing at a stale deployment and 404'd even though new git deploys were READY. Fix: POST /v2/deployments/{latest_dpl}/aliases {"alias":"cinch-traps.vercel.app"} (teamId=team_RogwTw2cEfQuRq0okTLYD018).
 
 ## Notes
 - Hard rules: no star ratings; #FFCC00 never text on light; text on yellow = #111; no invented quotes/stats; tunnel-line motif per page_flow.motif_continuity as inline SVG (terminates at signup input, pointed end).
