@@ -1,5 +1,6 @@
-/** 08 — Email capture band (solid yellow, black text/input) + black footer.
- *  Tunnel line terminates at the signup input with a pointed end (trap set). */
+/** 08 — Email capture band (solid CINCH yellow, black text/input) + black footer.
+ *  The tunnel line terminates here at the signup input with a pointed end (trap set).
+ *  Form is intentionally non-wired (no provider IDs yet). */
 
 const FOOTER_COLS = [
   {
@@ -20,26 +21,29 @@ const BADGES = ["Made in USA", "Since 1909", "Lifetime Warranty"];
 
 export default function SignupFooter() {
   return (
-    <>
-      {/* Signup band */}
-      <section aria-labelledby="signup-heading" className="relative bg-yellow">
-        {/* tunnel line terminates here: pointed end at the input */}
+    <section id="signup">
+      {/* Yellow signup band — text on yellow is ALWAYS #111 */}
+      <div className="relative overflow-hidden bg-yellow">
+        {/* Tunnel line terminates at the input: pointed end — trap set */}
         <svg
           aria-hidden="true"
-          className="absolute left-0 top-0 h-6 w-full"
-          viewBox="0 0 1440 24"
+          className="pointer-events-none absolute inset-x-0 top-0 h-10 w-full"
+          viewBox="0 0 1440 40"
           preserveAspectRatio="none"
           fill="none"
         >
-          <path d="M720 0 C 720 8, 700 14, 620 18 L 560 20 L 548 24 L 560 16 Z" fill="#111111" opacity="0.9" />
+          <path
+            d="M720 0 C 700 14, 640 22, 560 26 L 380 34 L 360 30 L 380 38"
+            stroke="#111111"
+            strokeWidth="2"
+            strokeDasharray="12 8"
+            opacity="0.55"
+          />
         </svg>
 
-        <div className="mx-auto flex max-w-7xl flex-col items-center gap-8 px-5 py-16 sm:px-8 lg:flex-row lg:justify-between lg:py-20">
+        <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-8 px-5 py-16 sm:px-8 lg:flex-row lg:justify-between lg:py-20">
           <div className="max-w-xl text-center lg:text-left">
-            <h2
-              id="signup-heading"
-              className="font-display text-2xl font-bold uppercase leading-tight text-ink sm:text-3xl"
-            >
+            <h2 className="font-display text-2xl font-bold uppercase leading-tight text-ink sm:text-3xl">
               Trapping Tips From the Oregon Workshop.
             </h2>
             <p className="mt-2 text-base text-ink/80">
@@ -62,71 +66,79 @@ export default function SignupFooter() {
               required
               autoComplete="email"
               placeholder="Your email address"
-              className="w-full border-2 border-ink bg-yellow px-4 py-3.5 text-base text-ink placeholder:text-ink/60"
+              className="w-full border-2 border-ink bg-yellow px-4 py-3.5 text-base text-ink placeholder:text-ink/60 focus:bg-white"
             />
             <button
               type="submit"
-              className="shrink-0 bg-ink px-7 py-3.5 font-display text-base font-semibold uppercase tracking-[0.14em] text-yellow transition-transform hover:-translate-y-0.5"
+              className="shrink-0 bg-ink px-7 py-3.5 font-display text-sm font-semibold uppercase tracking-[0.14em] text-yellow transition-transform hover:-translate-y-0.5"
             >
               Sign Up
             </button>
           </form>
         </div>
-      </section>
+      </div>
 
-      {/* Footer */}
+      {/* Black footer */}
       <footer className="bg-ink text-white">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
-          <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
+          <div className="grid gap-12 lg:grid-cols-[1.4fr_2fr]">
             <div>
-              <span className="inline-block bg-yellow px-3 py-1.5 font-display text-xl font-bold uppercase tracking-[0.18em] text-ink">
+              <span className="inline-block bg-yellow px-3 py-1.5 font-display text-2xl font-bold uppercase tracking-[0.18em] text-ink">
                 CINCH
               </span>
               <p className="mt-5 max-w-xs text-sm leading-relaxed text-white/70">
                 Cinch Traps LLC · 10140 SW Allen Blvd Suite A, Beaverton, OR
                 97005
               </p>
-              <p className="mt-3 text-sm text-white/70">
-                <a href="tel:+15036440150" className="hover:text-yellow">
+              <p className="mt-2 text-sm text-white/70">
+                <a
+                  href="tel:+15036440150"
+                  className="underline decoration-yellow/60 underline-offset-4 hover:text-yellow"
+                >
                   503-644-0150
                 </a>{" "}
                 ·{" "}
-                <a href="tel:+18776440150" className="hover:text-yellow">
-                  877-644-0150 (toll-free)
+                <a
+                  href="tel:+18776440150"
+                  className="underline decoration-yellow/60 underline-offset-4 hover:text-yellow"
+                >
+                  877-644-0150
                 </a>
               </p>
-              <p className="mt-1 text-sm text-white/70">
+              <p className="mt-2 text-sm text-white/60">
                 Orders fulfilled within 24 hours on business days.
               </p>
             </div>
 
-            {FOOTER_COLS.map((col) => (
-              <nav key={col.heading} aria-label={col.heading}>
-                <h3 className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-yellow">
-                  {col.heading}
-                </h3>
-                <ul className="mt-4 space-y-2.5">
-                  {col.links.map((link) => (
-                    <li key={link}>
-                      <a
-                        href="#main"
-                        className="text-sm text-white/80 transition-colors hover:text-yellow"
-                      >
-                        {link}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </nav>
-            ))}
+            <nav aria-label="Footer" className="grid grid-cols-2 gap-8 sm:grid-cols-3">
+              {FOOTER_COLS.map((col) => (
+                <div key={col.heading}>
+                  <h3 className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-yellow">
+                    {col.heading}
+                  </h3>
+                  <ul className="mt-4 space-y-2.5">
+                    {col.links.map((link) => (
+                      <li key={link}>
+                        <a
+                          href="#main"
+                          className="text-sm text-white/75 transition-colors hover:text-yellow"
+                        >
+                          {link}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </nav>
           </div>
 
-          <div className="mt-12 flex flex-col items-start gap-6 border-t border-white/15 pt-8 sm:flex-row sm:items-center sm:justify-between">
-            <ul className="flex flex-wrap gap-3">
+          <div className="mt-14 flex flex-col items-center gap-6 border-t border-white/15 pt-8 sm:flex-row sm:justify-between">
+            <ul className="flex flex-wrap items-center justify-center gap-3">
               {BADGES.map((badge) => (
                 <li
                   key={badge}
-                  className="border border-yellow px-3 py-1.5 font-display text-xs font-medium uppercase tracking-[0.16em] text-yellow"
+                  className="border border-yellow/70 px-3 py-1.5 font-display text-xs font-medium uppercase tracking-[0.16em] text-yellow"
                 >
                   {badge}
                 </li>
@@ -139,6 +151,6 @@ export default function SignupFooter() {
           </div>
         </div>
       </footer>
-    </>
+    </section>
   );
 }
