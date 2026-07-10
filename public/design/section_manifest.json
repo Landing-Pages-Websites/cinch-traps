@@ -1,0 +1,198 @@
+{
+  "brand": {
+    "name": "Cinch Traps",
+    "wordmark": "CINCH (stamped block letters on yellow field with galvanized-steel trap illustration) — FIXED asset, never redesigned",
+    "location": "10140 SW Allen Blvd Suite A, Beaverton, OR 97005",
+    "phone": "503-644-0150",
+    "toll_free": "877-644-0150",
+    "hours": "Orders fulfilled within 24 hours on business days",
+    "since": "1909",
+    "brand_color_from_logo": "#FFCC00",
+    "palette_guidance": "CINCH yellow #FFCC00 (dominant logo field color, 7726px sample) + black #111111 + galvanized-steel silver #BBC1C4 + white; warm off-white surfaces #F6F5F0/#FBFAF6; darkened gold #8A6D00 only for small links on white. BANS: yellow text on white/light surfaces (1.36:1 contrast fail — yellow is a FIELD/ACCENT color only); no invented hues (no coral, teal, blue, purple); no washed-out pastel gradients. Black-on-yellow is the signature CTA/badge pairing (13.9:1 AAA).",
+    "voice": "Plain-spoken, confident, folksy-but-credible. Heritage craftsman tone: 'tried-and-true', evidence-led, zero hype, lightly wry about the critters, respectful of the customer's frustration.",
+    "identity_belief": "The proven original — 116 years of handmade Oregon steel beats every gimmick on the shelf.",
+    "visual_metaphor": "Stamped galvanized steel + the underground tunnel: a thin yellow tunnel-line motif that runs beneath the surface of the page like a mole run, surfacing at section seams; stamp-style badges evoke the steel 'CINCH' stamp.",
+    "taglines": ["Tried-and-True Since 1909", "We've got you covered!", "The Original Mole & Gopher Trap"]
+  },
+  "required_sections": [
+    {
+      "id": "01-hero",
+      "name": "Hero",
+      "job": "hook",
+      "content": {
+        "eyebrow": "HANDMADE IN OREGON · SINCE 1909",
+        "headline": "The Original Mole & Gopher Trap. Tried-and-True Since 1909.",
+        "subhead": "Ranked #1 by five universities and the USDA. Handmade from American galvanized steel. Lifetime warranty. Free shipping on trap orders.",
+        "cta_primary": "SHOP TRAPS",
+        "cta_secondary": "Mole or Gopher? Find your trap",
+        "imagery": "Full-bleed golden-hour photograph: healthy green lawn/field at sunset, warm low sun flare, a homeowner walking with a dog in the middle distance (no face detail). Dark bottom-weighted scrim so white/yellow-on-dark type passes AAA. Grounded, real, warm Americana — NOT stocky.",
+        "badge": "stamp-style 'SINCE 1909' roundel, 1.5px border"
+      }
+    },
+    {
+      "id": "02-trust-strip",
+      "name": "Trust Bar",
+      "job": "proof",
+      "content": {
+        "items": [
+          "#1 RANKED — 5 UNIVERSITIES + USDA",
+          "SINCE 1909",
+          "LIFETIME WARRANTY",
+          "FREE SHIPPING ON TRAP ORDERS",
+          "MADE IN USA"
+        ],
+        "style": "single black band, items separated by thin yellow ticks, Oswald-style condensed uppercase, stamp-badge feel"
+      }
+    },
+    {
+      "id": "03-mole-or-gopher",
+      "name": "Mole or Gopher Router",
+      "job": "educate",
+      "content": {
+        "eyebrow": "KNOW YOUR ENEMY",
+        "headline": "Mole or Gopher? Read the Mound.",
+        "left_card": {"title": "MOLE", "body": "Round cone of fine, fluffy soil — like a tiny volcano.", "cta": "SHOP MOLE TRAPS"},
+        "right_card": {"title": "GOPHER", "body": "Fan or horseshoe-shaped mound with a plugged hole to one side.", "cta": "SHOP GOPHER TRAPS"},
+        "imagery": "Side-by-side comparison photos of a mole mound vs a gopher mound in real lawn/soil, shot straight-on, matched framing.",
+        "note": "Trap size is chosen by tunnel diameter — S / M / L."
+      }
+    },
+    {
+      "id": "04-shop-categories",
+      "name": "Shop by Category",
+      "job": "convert",
+      "content": {
+        "eyebrow": "FREE SHIPPING ON TRAP ORDERS · CONTINENTAL US",
+        "headline": "Kits Include Everything You Need.",
+        "cards": [
+          {"title": "MOLE TRAPS", "price": "from $24.99", "kit": "Mole Kit $49.99 · Deluxe $54.99"},
+          {"title": "GOPHER TRAPS", "price": "from $24.99", "kit": "Gopher Kit $54.99 · Deluxe $64.99"},
+          {"title": "ACCESSORIES", "price": "from $4.50", "kit": "Flags · tunnel tools · parts"}
+        ],
+        "cta": "SHOP ALL PRODUCTS",
+        "imagery": "Clean studio product photography of galvanized-steel scissor traps and boxed kits on light warm-gray wells (client's real SKU library look: raw steel trap with yellow tag; yellow CINCH kit boxes)."
+      }
+    },
+    {
+      "id": "05-how-it-works",
+      "name": "How It Works",
+      "job": "educate",
+      "content": {
+        "eyebrow": "NO POISON. NO GUESSWORK. NO TOUCHING THE ANIMAL.",
+        "headline": "Set It in 4 Simple Steps.",
+        "steps": [
+          {"n": "1", "label": "Find the active tunnel"},
+          {"n": "2", "label": "Open it with the tunnel tool"},
+          {"n": "3", "label": "Set two traps facing opposite directions"},
+          {"n": "4", "label": "Done — check the flag"}
+        ],
+        "cta": "SEE FULL INSTRUCTIONS",
+        "style": "quiet section — generous negative space, numbered steps in stamped yellow squares, thin diagram-line illustrations in black, no photography needed"
+      }
+    },
+    {
+      "id": "06-heritage",
+      "name": "Heritage / Legacy",
+      "job": "proof",
+      "content": {
+        "eyebrow": "THE LEGACY OF DON SPRAGUE",
+        "headline": "Handmade in Oregon From American Galvanized Steel — Since 1909.",
+        "body": "If it's not stamped CINCH, it's not the original. Built on Don Sprague's legacy of innovation, problem-solving, and a genuine passion for helping growers succeed.",
+        "usda_quote": "\u201cCINCH Trap was the all-around best performer.\u201d — USDA National Wildlife Research Center",
+        "cta": "OUR STORY",
+        "imagery": "Dark section: macro detail of galvanized steel trap mechanism / brushed-steel texture, warm workshop light, yellow stamped accents. Neutral placeholder area for an archival founder photo — NEVER a generated person."
+      }
+    },
+    {
+      "id": "07-testimonials",
+      "name": "Testimonial Wall",
+      "job": "proof",
+      "content": {
+        "headline": "The Only Product That Has Worked.",
+        "quotes": [
+          {"quote": "I caught the Mole King NEXT DAY after receiving and setting \u201csmall\u201d traps. Been after the dude for 6 months and tried everything.", "author": "Verified customer"},
+          {"quote": "I have tried them all. I gave up on the stores and searched for the traps online. I found Cinch Traps and they truly work.", "author": "Sam Street"},
+          {"quote": "We use them in our yard here in east Texas — these gophers don't stand a chance!", "author": "Jim from Texas"},
+          {"quote": "The quality and effectiveness is amazing. It's definitely a product I would recommend to everyone I know.", "author": "Rich Olson"}
+        ],
+        "cta": "READ ALL REVIEWS",
+        "style": "quote wall on warm off-white; oversized yellow quotation marks; NO star icons, NO rating counts anywhere"
+      }
+    },
+    {
+      "id": "08-signup-footer",
+      "name": "Email Capture + Footer",
+      "job": "retain",
+      "content": {
+        "signup_headline": "Trapping Tips From the Oregon Workshop.",
+        "signup_sub": "Seasonal reminders and field-tested advice. No spam.",
+        "signup_cta": "SIGN UP",
+        "signup_style": "solid CINCH yellow band, black text and black input outline",
+        "footer": {
+          "address": "Cinch Traps LLC · 10140 SW Allen Blvd Suite A, Beaverton, OR 97005",
+          "phone": "503-644-0150",
+          "columns": ["Shop (Mole Traps, Gopher Traps, Accessories, Apparel)", "Learn (How It Works, Mole & Gopher Info, FAQs, Reviews)", "Company (About, Legacy of Don Sprague, Contact)"],
+          "badges": ["MADE IN USA", "SINCE 1909", "LIFETIME WARRANTY"],
+          "style": "black footer, white text, yellow accents, wordmark as plain type"
+        }
+      }
+    }
+  ],
+  "customer_asks": [
+    {"ask": "Lead with warm, golden-hour outdoor lifestyle photography (EXAMPLE PHOTO - VIBE: person walking a green field at sunset with dog)", "source": "build_context.designDos / Melissa's Dropbox reference", "honored_by": "01-hero"},
+    {"ask": "Use CINCH yellow (#FFCC00) + black as the brand pair", "source": "build_context.designDos", "honored_by": "all sections"},
+    {"ask": "Oswald-style condensed uppercase display type", "source": "build_context.designDos", "honored_by": "all sections"},
+    {"ask": "Show the actual product: galvanized-steel trap studio shots on clean backgrounds", "source": "build_context.designDos / Dropbox SKU library", "honored_by": "04-shop-categories, 06-heritage"},
+    {"ask": "Heritage cues: Since 1909 badge, handmade-in-Oregon, Americana without kitsch", "source": "build_context.designDos", "honored_by": "01-hero, 02-trust-strip, 06-heritage"},
+    {"ask": "Clear mole-vs-gopher wayfinding — it is the key purchase decision", "source": "build_context.designDos / kickoff", "honored_by": "03-mole-or-gopher"},
+    {"ask": "Don't reuse the current site's photos (client wants all photos replaced)", "source": "Melissa email 6/4 / build_context.designDonts", "honored_by": "hard_rules"},
+    {"ask": "No poison/chemical imagery; no gory dead-animal photography", "source": "build_context.designDonts", "honored_by": "hard_rules"},
+    {"ask": "Avoid cartoonish pest illustrations that undercut professional-grade positioning", "source": "build_context.designDonts", "honored_by": "hard_rules"},
+    {"ask": "Don't bury the store behind educational content — Purchase Now stays primary", "source": "build_context.designDonts", "honored_by": "01-hero, 04-shop-categories"},
+    {"ask": "Avoid yellow text on white (fails contrast); yellow is a field/accent color", "source": "build_context.designDonts", "honored_by": "hard_rules"},
+    {"ask": "Lifetime warranty / free shipping on trap orders / fulfilled within 24 hours / handmade in Oregon since 1909", "source": "build_context.explicitCustomerPromises", "honored_by": "02-trust-strip, 04-shop-categories, 08-signup-footer"},
+    {"ask": "Don Sprague legacy woven through homepage", "source": "kickoff call (new /legacy-of-don-sprague page)", "honored_by": "06-heritage"},
+    {"ask": "Email capture (ActiveCampaign opt-in)", "source": "build_context.requiredSections", "honored_by": "08-signup-footer"}
+  ],
+  "page_flow": {
+    "section_weights": {
+      "01-hero": "loud",
+      "02-trust-strip": "strip",
+      "03-mole-or-gopher": "loud",
+      "04-shop-categories": "loud",
+      "05-how-it-works": "quiet",
+      "06-heritage": "loud",
+      "07-testimonials": "quiet",
+      "08-signup-footer": "loud"
+    },
+    "background_progression": [
+      {"sections": ["01-hero"], "band": "full-bleed golden-hour photo, darkening toward bottom edge into #111111"},
+      {"sections": ["02-trust-strip"], "band": "#111111"},
+      {"sections": ["03-mole-or-gopher"], "band": "#FFFFFF"},
+      {"sections": ["04-shop-categories", "05-how-it-works"], "band": "#F6F5F0 — ONE continuous warm surface across both"},
+      {"sections": ["06-heritage"], "band": "#111111 with steel texture"},
+      {"sections": ["07-testimonials"], "band": "#FBFAF6"},
+      {"sections": ["08-signup-footer"], "band": "#FFCC00 signup band ending in #111111 footer"}
+    ],
+    "motif_continuity": "The yellow tunnel-line (thin #FFCC00 line, occasionally dashed, like a mole run seen in cross-section) travels DOWN the page: exits 01-hero bottom-left under the scrim into the black strip; runs horizontally through 02-trust-strip as the tick separators baseline; exits 02 bottom-right, enters 03 top-right and dips between the two mound cards; exits 03 bottom-center, enters 04 top-center and underlines the headline; crosses the 04→05 seam unbroken (same band — the line is the only seam marker); exits 05 bottom-left, enters 06 top-left where it turns steel-silver against the dark; exits 06 bottom-right, enters 07 top-right connecting the quote cards; exits 07 bottom and terminates in 08 at the signup input as a pointed end (trap set — line ends).",
+    "rhythm_rules": [
+      "At most 3 sections use the eyebrow→headline→content-below silhouette (01, 04, 06); 03 is a split comparison, 05 is a horizontal step row, 07 is a masonry quote wall, 08 is a band+footer stack",
+      "05-how-it-works and 07-testimonials are quiet: mostly negative space, headline scale at most half the hero's",
+      "02-trust-strip renders at 1536x512 and is a single short band, never a full frame",
+      "Dark sections (02, 06, footer of 08) are the page's anchors — no other section goes dark",
+      "Section heights vary: 03 and 04 are the densest; 05 and 07 breathe"
+    ]
+  },
+  "hard_rules": [
+    "NO star ratings, review counts, or aggregate scores anywhere — none exist for this brand (proof.json rating=null). Rendering one is an automatic QA fail.",
+    "NO dead-animal or gore imagery; no poison/chemical/bait imagery; traps are shown clean and unset or in-soil without any animal",
+    "NO cartoonish pest illustrations — if a mole/gopher appears it is photographic or a minimal stamped-line icon",
+    "Yellow #FFCC00 is NEVER text on white/light backgrounds — yellow is a field, band, or accent color; text on yellow is always black #111",
+    "Real people (Don Sprague, staff, customers) are NEVER generated — neutral no-face placeholder areas only; hero figure is distant/back-turned with no face detail",
+    "The CINCH logo/wordmark is used AS-IS — never redesigned, restyled, or re-lettered; render as plain condensed type or a neutral placeholder block",
+    "All quotes, prices, and claims verbatim from this manifest — no invented stats, no invented press, no lorem",
+    "USDA and university claims exactly as written: 'Ranked #1 by five universities' + USDA 'all-around best performer' — never embellish",
+    "Free shipping applies to TRAP ORDERS in the continental US — never render unconditional 'free shipping on everything'",
+    "No imagery from the current cinchtraps.com site — all photography direction is new (golden-hour lifestyle + clean studio product)"
+  ]
+}
