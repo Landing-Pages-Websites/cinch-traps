@@ -1,51 +1,29 @@
 /** 04 — Shop by category: warm #F6F5F0 surface (continuous with 05), tunnel line underlines the headline. */
+import Image from "next/image";
 
 const CARDS = [
   {
     title: "Mole Traps",
     price: "from $24.99",
     kit: "Mole Kit $49.99 · Deluxe $54.99",
+    photo: "/images/design/elements/trap-product-mole.jpg",
+    alt: "CINCH galvanized-steel mole trap, studio photo",
   },
   {
     title: "Gopher Traps",
     price: "from $24.99",
     kit: "Gopher Kit $54.99 · Deluxe $64.99",
+    photo: "/images/design/elements/trap-product-gopher.jpg",
+    alt: "CINCH galvanized-steel gopher trap, studio photo",
   },
   {
     title: "Accessories",
     price: "from $4.50",
     kit: "Flags · tunnel tools · parts",
+    photo: "/images/design/elements/trap-product-kit.jpg",
+    alt: "CINCH deluxe trap kit with box, flags and tunnel tool",
   },
 ];
-
-/* Minimal stamped-line scissor-trap icon (no product photos available in approved assets). */
-function TrapIcon() {
-  return (
-    <svg
-      width="88"
-      height="88"
-      viewBox="0 0 88 88"
-      fill="none"
-      aria-hidden="true"
-      className="text-ink"
-    >
-      <path
-        d="M24 12 C 20 34, 30 44, 44 50 C 58 44, 68 34, 64 12"
-        stroke="currentColor"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-      />
-      <path
-        d="M30 76 C 34 58, 38 54, 44 50 C 50 54, 54 58, 58 76"
-        stroke="currentColor"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-      />
-      <circle cx="44" cy="50" r="6" stroke="currentColor" strokeWidth="2.5" />
-      <path d="M20 12h8M60 12h8" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
-    </svg>
-  );
-}
 
 export default function ShopCategories() {
   return (
@@ -76,8 +54,14 @@ export default function ShopCategories() {
               key={card.title}
               className="group flex flex-col border border-ink/10 bg-white shadow-[0_2px_0_rgba(17,17,17,0.06)] transition-transform hover:-translate-y-1"
             >
-              <div className="flex items-center justify-center bg-[linear-gradient(180deg,#EDECE6,#E2E1DA)] py-12">
-                <TrapIcon />
+              <div className="relative aspect-[4/3] overflow-hidden bg-[linear-gradient(180deg,#EDECE6,#E2E1DA)]">
+                <Image
+                  src={card.photo}
+                  alt={card.alt}
+                  fill
+                  sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 90vw"
+                  className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+                />
               </div>
               <div className="flex flex-1 flex-col border-t-4 border-yellow p-7">
                 <h3 className="font-display text-xl font-bold uppercase tracking-[0.1em] text-ink">
