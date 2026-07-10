@@ -62,3 +62,4 @@ No full-bleed background image was extracted because the page background is a si
 - ALL raster assets regenerated as FULL-SCENE reconstructions: occluded areas AI-filled, edges extended beyond the ref crop so the build crops/resizes freely (object-fit: cover).
 - how-step1-trap + how-step-trap-trigger reclassified CODE — vector-style line art, build as inline SVG.
 - how-step-trap-set: the numbered square is NOT in the asset — number squares are an SVG/HTML layer on all step tiles.
+- 05-how-it-works step imagery is ILLUSTRATION (warm painterly, per reviewer): how-step-trap-set.png + how-step-trap-reset.png regenerated in the ref's illustration style. Medium must match the comp — never substitute photos where the design shows illustration.

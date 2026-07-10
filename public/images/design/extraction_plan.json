@@ -293,9 +293,9 @@
       779
      ],
      "verdict": "extract",
-     "what": "Realistic galvanized-steel Cinch trap photography/render (set position, jaws open on stake), step illustration for column 2",
+     "what": "Step 2 visual: warm painterly ILLUSTRATION of a set trap in soil (matches ref style).",
      "asset_file": "elements/how-step-trap-set.png",
-     "build_note": "FULL-SCENE reconstruction: number square + yellow overlays removed (rebuild as SVG/HTML layer), trap+soil filled in, edges extended."
+     "build_note": "FULL-SCENE reconstruction as ILLUSTRATION (same painterly style as ref): number square + yellow overlays removed (SVG/HTML layer), scene extended. Medium = illustration, NOT photo (reviewer directive)."
     },
     {
      "id": 2,
@@ -318,9 +318,9 @@
       774
      ],
      "verdict": "extract",
-     "what": "Realistic trap-in-action photography (trap triggered/reset detail with yellow accent highlights), right column; likely same photo group as region 11",
+     "what": "Step visual: warm painterly ILLUSTRATION of a triggered/sprung trap in soil (matches ref style).",
      "asset_file": "elements/how-step-trap-reset.png",
-     "build_note": "FULL-SCENE reconstruction: yellow accent overlays removed, edges extended."
+     "build_note": "FULL-SCENE reconstruction as ILLUSTRATION (same painterly style as ref): yellow accents removed, scene extended. Medium = illustration, NOT photo (reviewer directive)."
     },
     {
      "id": 4,
