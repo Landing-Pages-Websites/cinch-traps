@@ -1,0 +1,202 @@
+<!doctype html><meta charset='utf-8'>
+<title>Image asset review</title><style>
+body{margin:0;padding:24px;background:#111;color:#eee;
+     font:14px/1.5 -apple-system,'Segoe UI',sans-serif}
+a{color:#8bd} .muted{color:#999} h1{font-size:20px}
+.proto{background:#1b1b1b;border:1px solid #333;border-radius:8px;
+       padding:12px 16px;max-width:900px;margin-bottom:24px}
+.proto code{background:#000;padding:1px 5px;border-radius:4px}
+.card{background:#1b1b1b;border:1px solid #333;border-radius:8px;
+      padding:16px;margin-bottom:20px;max-width:1200px}
+.card.missing{border-color:#a33}
+.pair{display:flex;gap:16px;flex-wrap:wrap}
+.pair figure{margin:0;flex:1;min-width:280px}
+.pair img{max-width:100%;border:1px solid #444;background:#fff}
+figcaption{font-size:12px;color:#999;margin-top:4px}
+.chip{display:inline-block;font-size:11px;padding:2px 8px;border-radius:10px;
+      background:#333;margin-left:8px;text-transform:uppercase}
+.chip.extract{background:#264} .chip.inpaint{background:#452}
+.chip.plate{background:#246} .chip.generated{background:#525}
+.chip.unmapped{background:#630} .chip.client-copy{background:#444}
+</style>
+<h1>Image asset review</h1>
+<p class='muted'>53 regions stay CODE (CSS/SVG — no file). 16 raster assets to review: 7 extract, 2 inpaint.</p>
+<div class='proto'><b>How to review:</b> judge each asset against its design reference on the left. To swap one out, replace the file directly in git — same path, push to main (<a href='https://github.com/Landing-Pages-Websites/cinch-traps/tree/main/public/images/design'>assets folder in the repo</a>; each card links to its file). Replaced files are authoritative — the pipeline never overwrites them. This page updates on every push. Complete the review subtask to approve; the build does not start until then.</div>
+<div class='card' id='01-hero-r1'>
+<b>01-hero-r1</b><span class='chip inpaint'>inpaint</span>
+<div class='muted'>Full-bleed golden-hour field photograph (grass field, molehill mounds, warm sky) used as the hero canvas; occluded by nav bar, headline typography, buttons and badge UI that must be repaired out to produce a clean plate.</div>
+<div class='muted'>Extract full-width photo plate, inpaint the overlaid nav/headline/button pixels; all text and UI rebuilt as live HTML on top with a dark gradient scrim overlay (CSS linear-gradient).</div>
+<div class='pair'>
+<figure><a href='crops/01-hero-context.png'><img src='crops/01-hero-r1-ref.png' alt=''></a><figcaption>design reference — 01-hero (click for full frame)</figcaption></figure>
+<figure><img src='../images/design/elements/hero-field-plate.png' alt=''><figcaption>shipped asset — <a href='https://github.com/Landing-Pages-Websites/cinch-traps/blob/main/public/images/design/elements/hero-field-plate.png'><code>elements/hero-field-plate.png</code></a> (replace in git)</figcaption></figure>
+</div></div>
+<div class='card' id='03-mole-or-gopher-r1'>
+<b>03-mole-or-gopher-r1</b><span class='chip extract'>extract</span>
+<div class='muted'>Mole mound photo (left panel of comparison pair)</div>
+<div class='muted'>Ship two photo crops inside CSS cards (rounded corners, card chrome coded); headline + MOLE/GOPHER label chips rebuilt as HTML overlays.</div>
+<div class='pair'>
+<figure><a href='crops/03-mole-or-gopher-context.png'><img src='crops/03-mole-or-gopher-r1-ref.png' alt=''></a><figcaption>design reference — 03-mole-or-gopher (click for full frame)</figcaption></figure>
+<figure><img src='../images/design/elements/mole-mound-photo.jpg' alt=''><figcaption>shipped asset — <a href='https://github.com/Landing-Pages-Websites/cinch-traps/blob/main/public/images/design/elements/mole-mound-photo.jpg'><code>elements/mole-mound-photo.jpg</code></a> (replace in git)</figcaption></figure>
+</div></div>
+<div class='card' id='03-mole-or-gopher-r101'>
+<b>03-mole-or-gopher-r101</b><span class='chip extract'>extract</span>
+<div class='muted'>Gopher mound photo (right panel of comparison pair)</div>
+<div class='muted'>Ship two photo crops inside CSS cards (rounded corners, card chrome coded); headline + MOLE/GOPHER label chips rebuilt as HTML overlays.</div>
+<div class='pair'>
+<figure><a href='crops/03-mole-or-gopher-context.png'><img src='crops/03-mole-or-gopher-r101-ref.png' alt=''></a><figcaption>design reference — 03-mole-or-gopher (click for full frame)</figcaption></figure>
+<figure><img src='../images/design/elements/gopher-mound-photo.jpg' alt=''><figcaption>shipped asset — <a href='https://github.com/Landing-Pages-Websites/cinch-traps/blob/main/public/images/design/elements/gopher-mound-photo.jpg'><code>elements/gopher-mound-photo.jpg</code></a> (replace in git)</figcaption></figure>
+</div></div>
+<div class='card' id='05-how-it-works-r1'>
+<b>05-how-it-works-r1</b><span class='chip extract'>extract</span>
+<div class='muted'>Realistic galvanized-steel Cinch trap photography/render (set position, jaws open on stake), step illustration for column 2</div>
+<div class='pair'>
+<figure><a href='crops/05-how-it-works-context.png'><img src='crops/05-how-it-works-r1-ref.png' alt=''></a><figcaption>design reference — 05-how-it-works (click for full frame)</figcaption></figure>
+<figure><img src='../images/design/elements/how-step-trap-set.png' alt=''><figcaption>shipped asset — <a href='https://github.com/Landing-Pages-Websites/cinch-traps/blob/main/public/images/design/elements/how-step-trap-set.png'><code>elements/how-step-trap-set.png</code></a> (replace in git)</figcaption></figure>
+</div></div>
+<div class='card' id='05-how-it-works-r3'>
+<b>05-how-it-works-r3</b><span class='chip extract'>extract</span>
+<div class='muted'>Realistic trap-in-action photography (trap triggered/reset detail with yellow accent highlights), right column; likely same photo group as region 11</div>
+<div class='pair'>
+<figure><a href='crops/05-how-it-works-context.png'><img src='crops/05-how-it-works-r3-ref.png' alt=''></a><figcaption>design reference — 05-how-it-works (click for full frame)</figcaption></figure>
+<figure><img src='../images/design/elements/how-step-trap-reset.png' alt=''><figcaption>shipped asset — <a href='https://github.com/Landing-Pages-Websites/cinch-traps/blob/main/public/images/design/elements/how-step-trap-reset.png'><code>elements/how-step-trap-reset.png</code></a> (replace in git)</figcaption></figure>
+</div></div>
+<div class='card' id='05-how-it-works-r6'>
+<b>05-how-it-works-r6</b><span class='chip extract'>extract</span>
+<div class='muted'>Realistic steel trap photography fragment (trigger-stage trap detail), column 3 step image</div>
+<div class='pair'>
+<figure><a href='crops/05-how-it-works-context.png'><img src='crops/05-how-it-works-r6-ref.png' alt=''></a><figcaption>design reference — 05-how-it-works (click for full frame)</figcaption></figure>
+<figure><img src='../images/design/elements/how-step-trap-trigger.png' alt=''><figcaption>shipped asset — <a href='https://github.com/Landing-Pages-Websites/cinch-traps/blob/main/public/images/design/elements/how-step-trap-trigger.png'><code>elements/how-step-trap-trigger.png</code></a> (replace in git)</figcaption></figure>
+</div></div>
+<div class='card' id='05-how-it-works-r9'>
+<b>05-how-it-works-r9</b><span class='chip extract'>extract</span>
+<div class='muted'>Realistic steel trap photography (step 1 trap image, left column)</div>
+<div class='pair'>
+<figure><a href='crops/05-how-it-works-context.png'><img src='crops/05-how-it-works-r9-ref.png' alt=''></a><figcaption>design reference — 05-how-it-works (click for full frame)</figcaption></figure>
+<figure><img src='../images/design/elements/how-step1-trap.png' alt=''><figcaption>shipped asset — <a href='https://github.com/Landing-Pages-Websites/cinch-traps/blob/main/public/images/design/elements/how-step1-trap.png'><code>elements/how-step1-trap.png</code></a> (replace in git)</figcaption></figure>
+</div></div>
+<div class='card' id='06-heritage-r1'>
+<b>06-heritage-r1</b><span class='chip extract'>extract</span>
+<div class='muted'>Full-bleed dark heritage plate: near-black textured steel background merging into large workshop/archival trap photography on the right half; photography IS the canvas — plate it with left-side text removed</div>
+<div class='pair'>
+<figure><a href='crops/06-heritage-context.png'><img src='crops/06-heritage-r1-ref.png' alt=''></a><figcaption>design reference — 06-heritage (click for full frame)</figcaption></figure>
+<figure><img src='../images/design/elements/heritage-steel-macro.png' alt=''><figcaption>shipped asset — <a href='https://github.com/Landing-Pages-Websites/cinch-traps/blob/main/public/images/design/elements/heritage-steel-macro.png'><code>elements/heritage-steel-macro.png</code></a> (replace in git)</figcaption></figure>
+</div></div>
+<div class='card' id='07-testimonials-r8'>
+<b>07-testimonials-r8</b><span class='chip inpaint'>inpaint</span>
+<div class='muted'>Photograph (hands holding trap / field shot) partially occluded top-left by the overlapping quote card region 7 — repair occluded pixels</div>
+<div class='pair'>
+<figure><a href='crops/07-testimonials-context.png'><img src='crops/07-testimonials-r8-ref.png' alt=''></a><figcaption>design reference — 07-testimonials (click for full frame)</figcaption></figure>
+<figure><img src='../images/design/elements/testimonial-photo-hands.png' alt=''><figcaption>shipped asset — <a href='https://github.com/Landing-Pages-Websites/cinch-traps/blob/main/public/images/design/elements/testimonial-photo-hands.png'><code>elements/testimonial-photo-hands.png</code></a> (replace in git)</figcaption></figure>
+</div></div>
+<div class='card' id='trap-product-mole'>
+<b>trap-product-mole</b><span class='chip client-copy'>client-copy</span>
+<div class='muted'> — </div>
+<div class='muted'>section: </div>
+<div class='pair'>
+<figure><figcaption>no design reference (net-new imagery — judge on its own)</figcaption></figure>
+<figure><img src='../images/design/assets/elements/trap-product-mole.jpg' alt=''><figcaption>shipped asset — <a href='https://github.com/Landing-Pages-Websites/cinch-traps/blob/main/public/images/design/assets/elements/trap-product-mole.jpg'><code>assets/elements/trap-product-mole.jpg</code></a> (replace in git)</figcaption></figure>
+</div></div>
+<div class='card' id='trap-product-gopher'>
+<b>trap-product-gopher</b><span class='chip client-copy'>client-copy</span>
+<div class='muted'> — </div>
+<div class='muted'>section: </div>
+<div class='pair'>
+<figure><figcaption>no design reference (net-new imagery — judge on its own)</figcaption></figure>
+<figure><img src='../images/design/assets/elements/trap-product-gopher.jpg' alt=''><figcaption>shipped asset — <a href='https://github.com/Landing-Pages-Websites/cinch-traps/blob/main/public/images/design/assets/elements/trap-product-gopher.jpg'><code>assets/elements/trap-product-gopher.jpg</code></a> (replace in git)</figcaption></figure>
+</div></div>
+<div class='card' id='trap-product-kit'>
+<b>trap-product-kit</b><span class='chip client-copy'>client-copy</span>
+<div class='muted'> — </div>
+<div class='muted'>section: </div>
+<div class='pair'>
+<figure><figcaption>no design reference (net-new imagery — judge on its own)</figcaption></figure>
+<figure><img src='../images/design/assets/elements/trap-product-kit.jpg' alt=''><figcaption>shipped asset — <a href='https://github.com/Landing-Pages-Websites/cinch-traps/blob/main/public/images/design/assets/elements/trap-product-kit.jpg'><code>assets/elements/trap-product-kit.jpg</code></a> (replace in git)</figcaption></figure>
+</div></div>
+<div class='card' id='hero-field-plate'>
+<b>hero-field-plate</b><span class='chip unmapped'>unmapped</span>
+<div class='muted'>in assets dir but in no plan/manifest</div>
+<div class='pair'>
+<figure><figcaption>no design reference (net-new imagery — judge on its own)</figcaption></figure>
+<figure><img src='../images/design/elements/hero-field-plate.webp' alt=''><figcaption>shipped asset — <a href='https://github.com/Landing-Pages-Websites/cinch-traps/blob/main/public/images/design/elements/hero-field-plate.webp'><code>elements/hero-field-plate.webp</code></a> (replace in git)</figcaption></figure>
+</div></div>
+<div class='card' id='trap-product-gopher'>
+<b>trap-product-gopher</b><span class='chip unmapped'>unmapped</span>
+<div class='muted'>in assets dir but in no plan/manifest</div>
+<div class='pair'>
+<figure><figcaption>no design reference (net-new imagery — judge on its own)</figcaption></figure>
+<figure><img src='../images/design/elements/trap-product-gopher.jpg' alt=''><figcaption>shipped asset — <a href='https://github.com/Landing-Pages-Websites/cinch-traps/blob/main/public/images/design/elements/trap-product-gopher.jpg'><code>elements/trap-product-gopher.jpg</code></a> (replace in git)</figcaption></figure>
+</div></div>
+<div class='card' id='trap-product-kit'>
+<b>trap-product-kit</b><span class='chip unmapped'>unmapped</span>
+<div class='muted'>in assets dir but in no plan/manifest</div>
+<div class='pair'>
+<figure><figcaption>no design reference (net-new imagery — judge on its own)</figcaption></figure>
+<figure><img src='../images/design/elements/trap-product-kit.jpg' alt=''><figcaption>shipped asset — <a href='https://github.com/Landing-Pages-Websites/cinch-traps/blob/main/public/images/design/elements/trap-product-kit.jpg'><code>elements/trap-product-kit.jpg</code></a> (replace in git)</figcaption></figure>
+</div></div>
+<div class='card' id='trap-product-mole'>
+<b>trap-product-mole</b><span class='chip unmapped'>unmapped</span>
+<div class='muted'>in assets dir but in no plan/manifest</div>
+<div class='pair'>
+<figure><figcaption>no design reference (net-new imagery — judge on its own)</figcaption></figure>
+<figure><img src='../images/design/elements/trap-product-mole.jpg' alt=''><figcaption>shipped asset — <a href='https://github.com/Landing-Pages-Websites/cinch-traps/blob/main/public/images/design/elements/trap-product-mole.jpg'><code>elements/trap-product-mole.jpg</code></a> (replace in git)</figcaption></figure>
+</div></div>
+<details><summary>NOTES.md — CSS/SVG techniques the build uses instead of images</summary><pre># Extracted Assets
+
+- `assets/hero-background-clean.png` - lossless cleaned full-bleed hero background.
+- `assets/hero-background-clean.webp` - web delivery version of the same cleaned background.
+
+The source screenshot does not contain recoverable photo pixels beneath the large left-side text, logo, CTA, and line art, so that area has been covered with a smooth dark matte. It is suitable for rebuilding the same hero layout with HTML layered over it, but it is not a true text-free original photograph.
+
+# Rebuild In Code
+
+- Full-screen dark readability overlay: Use layered CSS `linear-gradient()` / `radial-gradient()` on a `::before` pseudo-element over the background image.
+- `CINCH` wordmark and small tagline: Rebuild as HTML text with a tall condensed uppercase font and letter spacing, or recreate as inline SVG text/paths.
+- Main headline and supporting copy: Rebuild as semantic HTML text with a condensed distressed display font; use a CSS/SVG noise mask if the worn print texture is needed.
+- Circular `SINCE 1909` badge: Recreate as inline SVG with stroked circles, centered text, and an optional SVG noise/distress mask.
+- Yellow `SHOP TRAPS` CTA: Use a normal button/anchor with CSS background color, dark text, and an inline arrow icon.
+- Secondary `MOLE OR GOPHER? FIND YOUR TRAP` link: Use an anchor with uppercase letter spacing and a CSS `border-bottom`.
+- Yellow bottom waveform/marker: Recreate as an inline SVG path with a stroked line and small circle marker.
+- Bottom/side vignette: Use CSS gradients rather than an extracted texture or overlay image.
+- Man, dog, barn, field, flag, trees, and dirt mounds: Keep baked into the full-bleed photographic background; no separate layer is needed.
+# Extracted Assets
+
+- `assets/mole-mound.jpg` - 776x440 photo crop of the mole mound/lawn area, from source box `x:0 y:198 w:776 h:440`.
+- `assets/gopher-mound.jpg` - 750x440 photo crop of the gopher mound/lawn area, from source box `x:786 y:198 w:750 h:440`.
+
+No full-bleed background image was extracted because the page background is a simple light surface and the organic photography exists only in the two comparison panels.
+
+# Rebuild With HTML/CSS/SVG
+
+- Page background: use a white/off-white CSS background with a very subtle radial vignette if desired.
+- Header text and labels: use live HTML text with a tall condensed bold font such as Bebas Neue, Oswald, or an equivalent local display face.
+- Distressed yellow rules around the title: use CSS pseudo-elements or inline SVG strokes, with a rough mask/filter if the worn edge is important.
+- Yellow connector path and circular nodes: recreate as an inline SVG path with rounded corners, `stroke: #f5b800`, `fill: none`, and small SVG circles.
+- Photo panel rounded corners and center gutter: apply CSS `border-radius` and layout spacing to the extracted rectangular photos.
+- Mole/Gopher headings and body copy: use live HTML text, centered beneath each photo.
+- Yellow CTA buttons: use CSS background color, fixed padding, bold condensed text, and no image asset.
+- Metal trap-size plaque: recreate as a CSS rounded rectangle with layered gray linear gradients or an SVG noise filter for the brushed texture.
+- Plaque screw heads: use small inline SVG circles with radial gradients and a short slot line.
+- Plaque shadow: use a soft CSS `box-shadow`.
+# Extracted Assets
+
+- `assets/heritage-trap-photo-layer.png` - 1536x1024 transparent PNG photo layer; place it over a dark CSS background, aligned full-bleed/right. The left layout area is transparent, the trap photography is feathered in, and the bottom decorative rule/dots are cut out for SVG/CSS replacement.
+
+# Rebuild In HTML/CSS/SVG
+
+- Dark charcoal page background: use `background-color` plus radial/linear gradients for the vignette and warm right-side glow.
+- Subtle gritty/grain texture: use a low-opacity CSS pseudo-element with procedural noise, layered gradients, or a generated CSS noise data texture rather than a standalone image.
+- Top-left and bottom-right circuit/rule ornaments: recreate as inline SVG paths with gray strokes and yellow ring nodes.
+- Round `HANDMADE IN OREGON / CINCH / SINCE 1909` stamp: recreate as inline SVG with text-on-path and a distressed yellow fill/filter.
+- Main headline, subhead, body copy, quote, and attribution: rebuild as HTML text using a tall condensed display face plus a narrow sans/serif pairing.
+- Yellow divider and quote accent: use CSS borders/pseudo-elements or a tiny inline SVG quote mark.
+- Yellow `OUR STORY` button and arrow: use CSS for the rectangle/distress treatment and an inline SVG arrow icon.
+- Center aged paper/photo card: rebuild with CSS/SVG using an off-white rectangle, scalloped/irregular edge mask, inner border corner marks, sepia gradients, and pseudo-element scratches/stains.
+- Card diagonal lines and small blemish: recreate as low-opacity CSS/SVG strokes and radial-gradient marks.
+
+# Global build notes (orchestrator)
+- HARD RULE: no review-star ratings anywhere — hero + trust-strip emblems are RANK badges (laurel/rosette), never stars.
+- Real people never generated: heritage founder photo slot receives the client&#x27;s real Don Sprague archival photo at build time.
+- Product cards use REAL client studio SKU photos (trap-product-*.jpg), not frame extractions.
+- Tunnel-line motif = ONE inline SVG layer per section, 2px #FFCC00 stroke, traveling per page_flow.motif_continuity.
+
+</pre></details>
