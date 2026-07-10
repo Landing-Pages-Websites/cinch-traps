@@ -294,8 +294,8 @@
      ],
      "verdict": "extract",
      "what": "Step 2 visual: warm painterly ILLUSTRATION of a set trap in soil (matches ref style).",
-     "asset_file": "elements/how-step-trap-set.png",
-     "build_note": "FULL-SCENE reconstruction as ILLUSTRATION (same painterly style as ref): number square + yellow overlays removed (SVG/HTML layer), scene extended. Medium = illustration, NOT photo (reviewer directive)."
+     "asset_file": "elements/how-step2-trap-set.png",
+     "build_note": "FULL-SCENE reconstruction as ILLUSTRATION (same painterly style as ref): number square + yellow overlays removed (SVG/HTML layer), scene extended. Medium = illustration, NOT photo (reviewer directive). RENAMED to positional step name so filename == step number."
     },
     {
      "id": 2,
@@ -319,8 +319,8 @@
      ],
      "verdict": "extract",
      "what": "Step visual: warm painterly ILLUSTRATION of a triggered/sprung trap in soil (matches ref style).",
-     "asset_file": "elements/how-step-trap-reset.png",
-     "build_note": "FULL-SCENE reconstruction as ILLUSTRATION (same painterly style as ref): yellow accents removed, scene extended. Medium = illustration, NOT photo (reviewer directive)."
+     "asset_file": "elements/how-step4-trap-sprung.png",
+     "build_note": "FULL-SCENE reconstruction as ILLUSTRATION (same painterly style as ref): yellow accents removed, scene extended. Medium = illustration, NOT photo (reviewer directive). RENAMED to positional step name so filename == step number."
     },
     {
      "id": 4,
