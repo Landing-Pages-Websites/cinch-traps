@@ -14,7 +14,7 @@
      ],
      "verdict": "inpaint",
      "what": "Full-bleed golden-hour field photograph (grass field, molehill mounds, warm sky) used as the hero canvas; occluded by nav bar, headline typography, buttons and badge UI that must be repaired out to produce a clean plate.",
-     "build_note": "Extract full-width photo plate, inpaint the overlaid nav/headline/button pixels; all text and UI rebuilt as live HTML on top with a dark gradient scrim overlay (CSS linear-gradient).",
+     "build_note": "Extract full-width photo plate, inpaint the overlaid nav/headline/button pixels; all text and UI rebuilt as live HTML on top with a dark gradient scrim overlay (CSS linear-gradient). FULL-SCENE reconstruction: occluded left side AI-filled with field/sky continuation, edges extended \u2014 crop freely with CSS; overlay scrim via CSS gradient.",
      "asset_file": "elements/hero-field-plate.png"
     },
     {
@@ -147,7 +147,7 @@
      ],
      "verdict": "extract",
      "what": "Mole mound photo (left panel of comparison pair)",
-     "build_note": "Ship two photo crops inside CSS cards (rounded corners, card chrome coded); headline + MOLE/GOPHER label chips rebuilt as HTML overlays.",
+     "build_note": "Ship two photo crops inside CSS cards (rounded corners, card chrome coded); headline + MOLE/GOPHER label chips rebuilt as HTML overlays. FULL-SCENE reconstruction + extension \u2014 crop to card with CSS object-fit.",
      "asset_file": "elements/mole-mound-photo.jpg"
     },
     {
@@ -196,7 +196,7 @@
      ],
      "verdict": "extract",
      "what": "Gopher mound photo (right panel of comparison pair)",
-     "build_note": "Ship two photo crops inside CSS cards (rounded corners, card chrome coded); headline + MOLE/GOPHER label chips rebuilt as HTML overlays.",
+     "build_note": "Ship two photo crops inside CSS cards (rounded corners, card chrome coded); headline + MOLE/GOPHER label chips rebuilt as HTML overlays. FULL-SCENE reconstruction + extension \u2014 crop to card with CSS object-fit.",
      "asset_file": "elements/gopher-mound-photo.jpg"
     }
    ]
@@ -294,7 +294,8 @@
      ],
      "verdict": "extract",
      "what": "Realistic galvanized-steel Cinch trap photography/render (set position, jaws open on stake), step illustration for column 2",
-     "asset_file": "elements/how-step-trap-set.png"
+     "asset_file": "elements/how-step-trap-set.png",
+     "build_note": "FULL-SCENE reconstruction: number square + yellow overlays removed (rebuild as SVG/HTML layer), trap+soil filled in, edges extended."
     },
     {
      "id": 2,
@@ -318,7 +319,8 @@
      ],
      "verdict": "extract",
      "what": "Realistic trap-in-action photography (trap triggered/reset detail with yellow accent highlights), right column; likely same photo group as region 11",
-     "asset_file": "elements/how-step-trap-reset.png"
+     "asset_file": "elements/how-step-trap-reset.png",
+     "build_note": "FULL-SCENE reconstruction: yellow accent overlays removed, edges extended."
     },
     {
      "id": 4,
@@ -483,7 +485,8 @@
      ],
      "verdict": "extract",
      "what": "Full-bleed dark heritage plate: near-black textured steel background merging into large workshop/archival trap photography on the right half; photography IS the canvas \u2014 plate it with left-side text removed",
-     "asset_file": "elements/heritage-steel-macro.png"
+     "asset_file": "elements/heritage-steel-macro.png",
+     "build_note": "FULL-SCENE reconstruction: left text zone filled with real dark workbench surface (still quiet for text overlay via CSS), ornaments removed, edges extended."
     },
     {
      "id": 2,
@@ -634,7 +637,8 @@
      ],
      "verdict": "inpaint",
      "what": "Photograph (hands holding trap / field shot) partially occluded top-left by the overlapping quote card region 7 \u2014 repair occluded pixels",
-     "asset_file": "elements/testimonial-photo-hands.png"
+     "asset_file": "elements/testimonial-photo-hands.png",
+     "build_note": "FULL-SCENE reconstruction: occluding quote card AI-filled, edges extended. Hands only, no faces."
     },
     {
      "id": 9,
