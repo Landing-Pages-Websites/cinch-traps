@@ -57,3 +57,8 @@ No full-bleed background image was extracted because the page background is a si
 - Product cards use REAL client studio SKU photos (trap-product-*.jpg), not frame extractions.
 - Tunnel-line motif = ONE inline SVG layer per section, 2px #FFCC00 stroke, traveling per page_flow.motif_continuity.
 
+
+# Regeneration pass (reviewer feedback, 7/10)
+- ALL raster assets regenerated as FULL-SCENE reconstructions: occluded areas AI-filled, edges extended beyond the ref crop so the build crops/resizes freely (object-fit: cover).
+- how-step1-trap + how-step-trap-trigger reclassified CODE — vector-style line art, build as inline SVG.
+- how-step-trap-set: the numbered square is NOT in the asset — number squares are an SVG/HTML layer on all step tiles.

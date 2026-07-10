@@ -352,9 +352,10 @@
       1049,
       531
      ],
-     "verdict": "extract",
-     "what": "Realistic steel trap photography fragment (trigger-stage trap detail), column 3 step image",
-     "asset_file": "elements/how-step-trap-trigger.png"
+     "verdict": "code",
+     "what": "Step 3 visual: line-art trigger-stage trap diagram.",
+     "asset_file": "",
+     "build_note": "Recreated inline SVG line art \u2014 reviewer call: vector-style, not photography."
     },
     {
      "id": 7,
@@ -388,9 +389,10 @@
       301,
       504
      ],
-     "verdict": "extract",
-     "what": "Realistic steel trap photography (step 1 trap image, left column)",
-     "asset_file": "elements/how-step1-trap.png"
+     "verdict": "code",
+     "what": "Step 1 visual: line-art trap/tunnel diagram.",
+     "asset_file": "",
+     "build_note": "Recreated inline SVG line art (stroke #111, yellow accents) \u2014 reviewer call: this is vector-style, not photography."
     },
     {
      "id": 10,
