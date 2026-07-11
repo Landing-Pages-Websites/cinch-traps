@@ -30,22 +30,6 @@ const QUOTES = [
 export default function Testimonials() {
   return (
     <section id="reviews" className="relative overflow-hidden bg-paper">
-      {/* Tunnel line: enters top-right at x=1325 (from 06), threads between the quote cards, exits bottom-center at x=720 (into 08) */}
-      <svg
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 h-full w-full"
-        viewBox="0 0 1440 800"
-        preserveAspectRatio="none"
-        fill="none"
-      >
-        <path
-          d="M1325 0 C 1240 60, 1000 200, 720 380 C 640 560, 700 680, 720 800"
-          stroke="#FFCC00"
-          strokeWidth="2"
-          strokeDasharray="12 8"
-          opacity="0.5"
-        />
-      </svg>
 
       <div className="relative mx-auto max-w-6xl px-5 py-24 sm:px-8 lg:py-32">
         <h2 className="text-center font-display text-2xl font-bold uppercase leading-tight text-ink sm:text-3xl">

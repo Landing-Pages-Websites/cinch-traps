@@ -7,16 +7,17 @@ import Image from "next/image";
 export default function Heritage() {
   return (
     <section id="heritage" className="grain relative overflow-hidden bg-ink">
-      {/* Steel macro photography: trap coil centered in the empty zone right of the text */}
-      <div className="absolute inset-y-0 right-0 w-full lg:w-[52%]" aria-hidden="true">
+      {/* Steel macro photography, full-bleed: the trap coil (at ~81% of the asset width)
+          lands centered in the empty zone right of the text column (~75% of section width) */}
+      <div className="absolute inset-0" aria-hidden="true">
         <Image
           src="/images/design/elements/heritage-steel-macro.png"
           alt=""
           fill
-          sizes="(max-width: 1024px) 100vw, 52vw"
-          className="object-cover object-right opacity-45 lg:opacity-100"
+          sizes="100vw"
+          className="object-cover object-[50%_20%] opacity-40 lg:opacity-100"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,#111111_0%,rgba(17,17,17,0.55)_22%,rgba(17,17,17,0.08)_48%,rgba(17,17,17,0)_70%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,#111111_0%,rgba(17,17,17,0.92)_38%,rgba(17,17,17,0.45)_56%,rgba(17,17,17,0)_74%)]" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:py-32">

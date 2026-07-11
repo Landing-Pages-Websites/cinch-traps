@@ -34,22 +34,6 @@ const STEPS = [
 export default function HowItWorks() {
   return (
     <section id="how-it-works" className="relative bg-cream">
-      {/* Tunnel line: enters top-center at x=720 (unbroken 04→05 seam, same #F6F5F0 band), exits bottom-left at x=115 (into 06) */}
-      <svg
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 h-full w-full"
-        viewBox="0 0 1440 900"
-        preserveAspectRatio="none"
-        fill="none"
-      >
-        <path
-          d="M720 0 C 760 120, 1390 160, 1396 400 C 1400 620, 400 560, 180 700 C 100 752, 108 830, 115 900"
-          stroke="#FFCC00"
-          strokeWidth="2"
-          strokeDasharray="12 8"
-          opacity="0.7"
-        />
-      </svg>
 
       <div className="mx-auto max-w-6xl px-5 py-24 sm:px-8 lg:py-32">
         <div className="text-center">

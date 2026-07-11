@@ -95,21 +95,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Tunnel-line motif: dips across, exits bottom-left at x=58 (4%) — TrustStrip enters at the same x */}
-      <svg
-        aria-hidden="true"
-        className="relative -mb-px h-10 w-full"
-        viewBox="0 0 1440 40"
-        preserveAspectRatio="none"
-        fill="none"
-      >
-        <path
-          d="M1440 8 C 1100 8, 900 30, 620 30 S 220 14, 100 30 C 80 33, 62 36, 58 40"
-          stroke="#FFCC00"
-          strokeWidth="2"
-        />
-        <circle cx="620" cy="30" r="4" fill="#FFCC00" />
-      </svg>
     </section>
   );
 }

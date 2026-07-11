@@ -28,24 +28,6 @@ const CARDS = [
 export default function ShopCategories() {
   return (
     <section id="shop" className="relative overflow-hidden bg-cream">
-      {/* Tunnel line: enters top-center at x=720 (from 03), dips to underline the headline,
-          runs down the left gutter and exits bottom-center at x=720 — crossing the 04→05 seam unbroken */}
-      <svg
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 h-full w-full"
-        viewBox="0 0 1440 900"
-        preserveAspectRatio="none"
-        fill="none"
-      >
-        <path
-          d="M720 0 C 730 60, 640 130, 600 160 C 560 185, 600 205, 720 200 C 810 196, 860 175, 880 160 C 900 300, 60 260, 48 480 C 40 700, 620 760, 720 900"
-          stroke="#FFCC00"
-          strokeWidth="2"
-          strokeDasharray="12 8"
-          opacity="0.55"
-        />
-        <circle cx="720" cy="200" r="4" fill="#FFCC00" opacity="0.8" />
-      </svg>
 
       <div className="relative mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-28">
         <div className="text-center">

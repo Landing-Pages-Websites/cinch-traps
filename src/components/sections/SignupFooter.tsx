@@ -24,23 +24,6 @@ export default function SignupFooter() {
     <section id="signup">
       {/* Yellow signup band — text on yellow is ALWAYS #111 */}
       <div className="relative overflow-hidden bg-yellow">
-        {/* Tunnel line: enters top-center at x=720 (from 07), terminates at the signup input with a pointed end — trap set */}
-        <svg
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 h-full w-full"
-          viewBox="0 0 1440 200"
-          preserveAspectRatio="none"
-          fill="none"
-        >
-          <path
-            d="M720 0 C 700 40, 760 70, 830 84 L 890 96"
-            stroke="#111111"
-            strokeWidth="2"
-            strokeDasharray="12 8"
-            opacity="0.55"
-          />
-          <path d="M890 96 L 872 88 L 876 100 Z" fill="#111111" opacity="0.55" />
-        </svg>
 
         <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-8 px-5 py-16 sm:px-8 lg:flex-row lg:justify-between lg:py-20">
           <div className="max-w-xl text-center lg:text-left">

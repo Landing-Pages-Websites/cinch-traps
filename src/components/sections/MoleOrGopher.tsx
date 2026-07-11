@@ -4,22 +4,6 @@ import Image from "next/image";
 export default function MoleOrGopher() {
   return (
     <section id="mole-or-gopher" className="relative overflow-hidden bg-white">
-      {/* Tunnel line: enters top-right at x=1382 (from TrustStrip), dips between the two cards, exits bottom-center at x=720 (into 04) */}
-      <svg
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 h-full w-full"
-        viewBox="0 0 1440 900"
-        preserveAspectRatio="none"
-        fill="none"
-      >
-        <path
-          d="M1382 0 C 1300 60, 900 90, 720 260 C 700 500, 700 640, 720 900"
-          stroke="#FFCC00"
-          strokeWidth="2"
-          strokeDasharray="12 8"
-          opacity="0.6"
-        />
-      </svg>
 
       <div className="relative mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-28">
         <div className="text-center">
