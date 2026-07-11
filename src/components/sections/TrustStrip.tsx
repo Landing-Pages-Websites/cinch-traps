@@ -9,8 +9,23 @@ const ITEMS = [
 
 export default function TrustStrip() {
   return (
-    <section aria-label="Why Cinch Traps" className="relative bg-ink py-6">
-      <ul className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-y-3 px-5 sm:px-8">
+    <section aria-label="Why Cinch Traps" className="relative overflow-hidden bg-ink py-6">
+      {/* Tunnel line: enters top-left at x=58 (from hero), runs as the tick baseline, exits bottom-right at x=1382 (into 03) */}
+      <svg
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 h-full w-full"
+        viewBox="0 0 1440 100"
+        preserveAspectRatio="none"
+        fill="none"
+      >
+        <path
+          d="M58 0 C 66 30, 120 62, 300 62 H 1120 C 1260 62, 1350 80, 1382 100"
+          stroke="#FFCC00"
+          strokeWidth="2"
+          strokeDasharray="10 6"
+        />
+      </svg>
+      <ul className="relative mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-y-3 px-5 sm:px-8">
         {ITEMS.map((item, i) => (
           <li key={item} className="flex items-center">
             {i > 0 && (
@@ -25,16 +40,6 @@ export default function TrustStrip() {
           </li>
         ))}
       </ul>
-      {/* Tunnel line runs through the band and exits bottom-right */}
-      <svg
-        aria-hidden="true"
-        className="absolute bottom-0 left-0 h-3 w-full"
-        viewBox="0 0 1440 12"
-        preserveAspectRatio="none"
-        fill="none"
-      >
-        <path d="M0 2 H 1200 C 1300 2, 1360 10, 1440 12" stroke="#FFCC00" strokeWidth="2" strokeDasharray="10 6" />
-      </svg>
     </section>
   );
 }

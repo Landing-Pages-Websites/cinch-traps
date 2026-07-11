@@ -17,7 +17,7 @@ export default function Heritage() {
         <div className="absolute inset-0 bg-[linear-gradient(90deg,#111111_0%,rgba(17,17,17,0.75)_45%,rgba(17,17,17,0.35)_100%)]" />
       </div>
 
-      {/* Tunnel line: enters top-left, turns steel-silver against the dark, exits bottom-right */}
+      {/* Tunnel line: enters top-left at x=115 (from 05), turns steel-silver against the dark, exits bottom-right at x=1325 (into 07) */}
       <svg
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 h-full w-full"
@@ -26,7 +26,7 @@ export default function Heritage() {
         fill="none"
       >
         <path
-          d="M0 20 C 120 40, 180 120, 200 300 C 220 520, 700 640, 1100 700 L 1440 780"
+          d="M115 0 C 140 60, 180 140, 200 300 C 220 520, 700 640, 1100 700 C 1230 722, 1300 820, 1325 800"
           stroke="#BBC1C4"
           strokeWidth="2"
           strokeDasharray="14 10"

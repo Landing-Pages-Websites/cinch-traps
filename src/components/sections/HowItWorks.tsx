@@ -34,16 +34,16 @@ const STEPS = [
 export default function HowItWorks() {
   return (
     <section id="how-it-works" className="relative bg-cream">
-      {/* Tunnel line crosses the 04→05 seam unbroken and exits bottom-left */}
+      {/* Tunnel line: enters top-center at x=720 (unbroken 04→05 seam, same #F6F5F0 band), exits bottom-left at x=115 (into 06) */}
       <svg
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 top-0 h-8 w-full"
-        viewBox="0 0 1440 32"
+        className="pointer-events-none absolute inset-0 h-full w-full"
+        viewBox="0 0 1440 900"
         preserveAspectRatio="none"
         fill="none"
       >
         <path
-          d="M720 0 C 740 12, 700 20, 640 24 S 400 20, 240 26 L 60 30"
+          d="M720 0 C 760 120, 1390 160, 1396 400 C 1400 620, 400 560, 180 700 C 100 752, 108 830, 115 900"
           stroke="#FFCC00"
           strokeWidth="2"
           strokeDasharray="12 8"

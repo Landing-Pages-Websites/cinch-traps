@@ -27,8 +27,27 @@ const CARDS = [
 
 export default function ShopCategories() {
   return (
-    <section id="shop" className="relative bg-cream">
-      <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-28">
+    <section id="shop" className="relative overflow-hidden bg-cream">
+      {/* Tunnel line: enters top-center at x=720 (from 03), dips to underline the headline,
+          runs down the left gutter and exits bottom-center at x=720 — crossing the 04→05 seam unbroken */}
+      <svg
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 h-full w-full"
+        viewBox="0 0 1440 900"
+        preserveAspectRatio="none"
+        fill="none"
+      >
+        <path
+          d="M720 0 C 730 60, 640 130, 600 160 C 560 185, 600 205, 720 200 C 810 196, 860 175, 880 160 C 900 300, 60 260, 48 480 C 40 700, 620 760, 720 900"
+          stroke="#FFCC00"
+          strokeWidth="2"
+          strokeDasharray="12 8"
+          opacity="0.55"
+        />
+        <circle cx="720" cy="200" r="4" fill="#FFCC00" opacity="0.8" />
+      </svg>
+
+      <div className="relative mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-28">
         <div className="text-center">
           <p className="font-display text-sm font-semibold uppercase tracking-[0.28em] text-golddark">
             Free Shipping on Trap Orders · Continental US
@@ -36,16 +55,6 @@ export default function ShopCategories() {
           <h2 className="mt-3 font-display text-3xl font-bold uppercase leading-tight text-ink sm:text-4xl lg:text-5xl">
             Kits Include Everything You Need.
           </h2>
-          {/* Tunnel line enters top-center and underlines the headline */}
-          <svg
-            aria-hidden="true"
-            className="mx-auto mt-5 h-4 w-64"
-            viewBox="0 0 256 16"
-            fill="none"
-          >
-            <path d="M0 4 C 60 4, 90 12, 128 12 S 200 4, 256 8" stroke="#FFCC00" strokeWidth="2" />
-            <circle cx="128" cy="12" r="3.5" fill="#FFCC00" />
-          </svg>
         </div>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">

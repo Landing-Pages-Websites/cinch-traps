@@ -27,7 +27,7 @@ const QUOTES = [
 export default function Testimonials() {
   return (
     <section id="reviews" className="relative overflow-hidden bg-paper">
-      {/* Tunnel line: enters top-right, threads between the quote cards, exits bottom-center */}
+      {/* Tunnel line: enters top-right at x=1325 (from 06), threads between the quote cards, exits bottom-center at x=720 (into 08) */}
       <svg
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 h-full w-full"
@@ -36,7 +36,7 @@ export default function Testimonials() {
         fill="none"
       >
         <path
-          d="M1440 30 C 1240 60, 1000 200, 720 380 C 640 560, 700 680, 720 800"
+          d="M1325 0 C 1240 60, 1000 200, 720 380 C 640 560, 700 680, 720 800"
           stroke="#FFCC00"
           strokeWidth="2"
           strokeDasharray="12 8"
