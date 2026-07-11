@@ -10,12 +10,17 @@ export default function Hero() {
         fill
         priority
         sizes="100vw"
-        className="object-cover object-center"
+        className="object-cover object-[62%_center]"
       />
       {/* Readability scrim, darkening into #111 at the bottom edge */}
       <div
         aria-hidden="true"
         className="absolute inset-0 bg-[linear-gradient(180deg,rgba(17,17,17,0.55)_0%,rgba(17,17,17,0.15)_35%,rgba(17,17,17,0.55)_70%,#111111_100%)]"
+      />
+      {/* Left-side scrim: headline owns the darker/emptier left of the field, subject stays right of center */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-[linear-gradient(90deg,rgba(17,17,17,0.55)_0%,rgba(17,17,17,0.3)_38%,rgba(17,17,17,0)_62%)]"
       />
 
       <div className="relative mx-auto w-full max-w-7xl px-5 pb-20 pt-36 sm:px-8 lg:pb-28">

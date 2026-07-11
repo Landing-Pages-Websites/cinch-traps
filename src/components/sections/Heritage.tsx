@@ -5,16 +5,16 @@ import Image from "next/image";
 export default function Heritage() {
   return (
     <section id="heritage" className="grain relative overflow-hidden bg-ink">
-      {/* Steel macro photography, feathered right */}
-      <div className="absolute inset-y-0 right-0 w-full lg:w-3/5" aria-hidden="true">
+      {/* Steel macro photography, right-anchored; text owns the quiet dark left zone */}
+      <div className="absolute inset-y-0 right-0 w-full lg:w-[55%]" aria-hidden="true">
         <Image
           src="/images/design/elements/heritage-steel-macro.png"
           alt=""
           fill
-          sizes="(max-width: 1024px) 100vw, 60vw"
-          className="object-cover object-center opacity-45 lg:opacity-70"
+          sizes="(max-width: 1024px) 100vw, 55vw"
+          className="object-cover object-[70%_center] opacity-45 lg:opacity-90"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,#111111_0%,rgba(17,17,17,0.75)_45%,rgba(17,17,17,0.35)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,#111111_0%,rgba(17,17,17,0.72)_35%,rgba(17,17,17,0.18)_75%,rgba(17,17,17,0.05)_100%)]" />
       </div>
 
       {/* Tunnel line: enters top-left at x=115 (from 05), turns steel-silver against the dark, exits bottom-right at x=1325 (into 07) */}
@@ -26,11 +26,11 @@ export default function Heritage() {
         fill="none"
       >
         <path
-          d="M115 0 C 140 60, 180 140, 200 300 C 220 520, 700 640, 1100 700 C 1230 722, 1300 820, 1325 800"
+          d="M115 0 C 140 60, 180 140, 200 300 C 220 520, 700 640, 1100 700 C 1230 722, 1305 755, 1325 800"
           stroke="#BBC1C4"
           strokeWidth="2"
           strokeDasharray="14 10"
-          opacity="0.5"
+          opacity="0.7"
         />
         <circle cx="200" cy="300" r="4" fill="#FFCC00" opacity="0.8" />
       </svg>

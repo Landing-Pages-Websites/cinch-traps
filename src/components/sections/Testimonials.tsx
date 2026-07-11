@@ -1,3 +1,6 @@
+import Image from "next/image";
+import { Fragment } from "react";
+
 /** 07 — Testimonials: QUIET quote wall on warm #FBFAF6. Oversized yellow quote marks.
  *  HARD RULE: no star icons, no rating counts. Quotes verbatim from the manifest. */
 
@@ -50,26 +53,39 @@ export default function Testimonials() {
         </h2>
 
         <div className="mt-14 grid gap-6 md:grid-cols-2 lg:gap-8">
-          {QUOTES.map((q) => (
-            <figure
-              key={q.author + q.quote.slice(0, 12)}
-              className="relative flex flex-col bg-white p-8 shadow-[0_2px_0_rgba(17,17,17,0.06)] sm:p-10"
-            >
-              <span
-                aria-hidden="true"
-                className="font-display text-6xl font-bold leading-none text-yellow"
+          {QUOTES.map((q, i) => (
+            <Fragment key={q.author + q.quote.slice(0, 12)}>
+              <figure
+                className="relative flex flex-col bg-white p-8 shadow-[0_2px_0_rgba(17,17,17,0.06)] sm:p-10"
               >
-                &ldquo;
-              </span>
-              <blockquote className="mt-2 flex-1">
-                <p className="text-base leading-relaxed text-ink/85 sm:text-lg">
-                  {q.quote}
-                </p>
-              </blockquote>
-              <figcaption className="mt-6 font-display text-sm font-semibold uppercase tracking-[0.14em] text-ink">
-                — {q.author}
-              </figcaption>
-            </figure>
+                <span
+                  aria-hidden="true"
+                  className="font-display text-6xl font-bold leading-none text-yellow"
+                >
+                  &ldquo;
+                </span>
+                <blockquote className="mt-2 flex-1">
+                  <p className="text-base leading-relaxed text-ink/85 sm:text-lg">
+                    {q.quote}
+                  </p>
+                </blockquote>
+                <figcaption className="mt-6 font-display text-sm font-semibold uppercase tracking-[0.14em] text-ink">
+                  — {q.author}
+                </figcaption>
+              </figure>
+              {/* Photo card sits in the grid like the ref: hands + trap lower-left among the quotes */}
+              {i === 1 && (
+                <div className="relative min-h-[240px] overflow-hidden shadow-[0_2px_0_rgba(17,17,17,0.06)]">
+                  <Image
+                    src="/images/design/elements/testimonial-photo-hands.png"
+                    alt="Weathered hands holding a well-used CINCH trap"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover object-center"
+                  />
+                </div>
+              )}
+            </Fragment>
           ))}
         </div>
 
