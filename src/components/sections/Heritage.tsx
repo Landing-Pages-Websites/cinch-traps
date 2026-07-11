@@ -1,39 +1,23 @@
 import Image from "next/image";
 
-/** 06 — Heritage: dark #111 anchor with steel texture. Tunnel line turns steel-silver here.
+/** 06 — Heritage: dark #111 anchor with steel texture. The tunnel-line motif goes
+ *  "underground" through this dark section (no line here — operator direction) and
+ *  re-emerges in 07.
  *  Founder photo slot = neutral placeholder (real people are never generated). */
 export default function Heritage() {
   return (
     <section id="heritage" className="grain relative overflow-hidden bg-ink">
-      {/* Steel macro photography, right-anchored; text owns the quiet dark left zone */}
-      <div className="absolute inset-y-0 right-0 w-full lg:w-[55%]" aria-hidden="true">
+      {/* Steel macro photography: trap coil centered in the empty zone right of the text */}
+      <div className="absolute inset-y-0 right-0 w-full lg:w-[52%]" aria-hidden="true">
         <Image
           src="/images/design/elements/heritage-steel-macro.png"
           alt=""
           fill
-          sizes="(max-width: 1024px) 100vw, 55vw"
-          className="object-cover object-[70%_center] opacity-45 lg:opacity-90"
+          sizes="(max-width: 1024px) 100vw, 52vw"
+          className="object-cover object-right opacity-45 lg:opacity-100"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,#111111_0%,rgba(17,17,17,0.72)_35%,rgba(17,17,17,0.18)_75%,rgba(17,17,17,0.05)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,#111111_0%,rgba(17,17,17,0.55)_22%,rgba(17,17,17,0.08)_48%,rgba(17,17,17,0)_70%)]" />
       </div>
-
-      {/* Tunnel line: enters top-left at x=115 (from 05), turns steel-silver against the dark, exits bottom-right at x=1325 (into 07) */}
-      <svg
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 h-full w-full"
-        viewBox="0 0 1440 800"
-        preserveAspectRatio="none"
-        fill="none"
-      >
-        <path
-          d="M115 0 C 140 60, 180 140, 200 300 C 220 520, 700 640, 1100 700 C 1230 722, 1305 755, 1325 800"
-          stroke="#BBC1C4"
-          strokeWidth="2"
-          strokeDasharray="14 10"
-          opacity="0.7"
-        />
-        <circle cx="200" cy="300" r="4" fill="#FFCC00" opacity="0.8" />
-      </svg>
 
       <div className="relative mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:py-32">
         <div className="max-w-2xl">
